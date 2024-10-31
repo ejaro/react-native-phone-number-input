@@ -17,8 +17,15 @@ export interface PhoneInputProps {
   disableArrowIcon?: boolean;
   placeholder?: string;
   onChangeCountry?: (country: Country) => void;
-  onChangeText?: (text: string) => void;
-  onChangeFormattedText?: (text: string) => void;
+  onChangeText?: (text: string, callback: (
+    {
+      cca2,
+      callingCode
+    }:{
+      cca2: string;
+      callingCode: string;
+    }
+  )=>{}) => void;  onChangeFormattedText?: (text: string) => void;
   renderDropdownImage?: JSX.Element;
   containerStyle?: StyleProp<ViewStyle>;
   textContainerStyle?: StyleProp<ViewStyle>;
